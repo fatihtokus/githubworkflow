@@ -13,4 +13,5 @@ jobs:
     - name: Webhook
       uses: distributhor/workflow-webhook@v2
       env:
-        webhook_url: "https://5aa9-2a00-23c7-2b8f-7301-10d4-f4d1-d649-3d2b.ngrok.io/pullRequestCreated"
+        webhook_url: 'https://5aa9-2a00-23c7-2b8f-7301-10d4-f4d1-d649-3d2b.ngrok.io/pullRequestCreated'
+        webhook_secret: ''
