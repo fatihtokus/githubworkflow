@@ -6,11 +6,10 @@ on:
       - '**.tf'
       
 jobs:
-  Explore-GitHub-Actions:
+  Trigger-ACR:
     runs-on: ubuntu-latest
     steps:
-    # Runs a single command using the runners shell
-    - name: Webhook
+    - name: ACR Webhook
       uses: distributhor/workflow-webhook@v2
       env:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
