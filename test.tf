@@ -1,12 +1,12 @@
 provider "aws" {
-  region                      = "us-east-1"
+  region                      = "us-west-1"
   skip_credentials_validation = false
   skip_requesting_account_id  = true
   access_key                  = "mock_access_key"
   secret_key                  = "mock_secret_key"
 }
 
-resource "aws_instance" "web_app" {
+resource "aws_instance" "web_app2" {
   ami           = "ami-674cbc1e"
   instance_type = "m5.4xlarge"              # <<<<< Try changing this to m5.8xlarge to compare the costs
 
@@ -22,7 +22,7 @@ resource "aws_instance" "web_app" {
   }
 }
 
-resource "aws_lambda_function" "hello_world" {
+resource "aws_lambda_function" "hello_world2" {
   function_name = "hello_world"
   role          = "arn:aws:lambda:us-east-1:account-id:resource-id"
   handler       = "exports.test"
